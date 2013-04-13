@@ -1,0 +1,9 @@
+SUBVERT
+:S[ubvert]/pattern							search in the current buffer
+:S[ubvert]/pattern/ {file} ...				search in the specified file(s), collecting results in quickfix list
+:S[ubvert]/pattern/replacement/[flags]		substitute in the current buffer
+crc				coerce to camelCase
+crm				coerce to MixedCase
+crs (also cr_) 	coerce to snake_case
+cru				coerce to SNAKE_UPPERCASE
+cr-				coerce to dash-case
