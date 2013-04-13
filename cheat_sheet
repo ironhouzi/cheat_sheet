@@ -35,3 +35,13 @@ crs (also cr_) 	coerce to snake_case
 cru				coerce to SNAKE_UPPERCASE
 cr-				coerce to dash-case
 
+GSTATUS
+C-n				next file
+C-p				previous file
+ca				commit --amend
+cA				amend using last commit message
+cc/C			commit
+D				diff
+q				close
+R				reload gstatus
+S				:Gvsplit
