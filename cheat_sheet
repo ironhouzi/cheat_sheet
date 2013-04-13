@@ -8,7 +8,7 @@ GIT
 git push -u origin branch							push new branch
 git remote show origin								shows remote branches
 git fetch origin									update local from origin
-git checkout --track -b <branch> origin/<branch>	new branch tracking remote branch
+git checkout --track -b <branch> origin/<branch>	new branch tracks remote branch
 git checkout --track origin/<branch>				terse version ^^
 git push origin --delete <branch>					delete remote branch
 
@@ -27,7 +27,7 @@ yss<char>			line surround
 
 SUBVERT
 :S[ubvert]/pattern							search in the current buffer
-:S[ubvert]/pattern/ {file} ...				search in the file(s), with results in quickfix list
+:S[ubvert]/pattern/ {file} ...				search files, results in quickfix list
 :S[ubvert]/pattern/replacement/[flags]		substitute in the current buffer
 crc				coerce to camelCase
 crm				coerce to MixedCase
