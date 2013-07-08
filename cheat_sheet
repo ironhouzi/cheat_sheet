@@ -16,6 +16,7 @@ ZSH
 print *(<tab>		list globs
 setopt glob_dots	glob hidden files
 unsetopt <opt>		unsets setopts
+zmv '(**/)(*)' '$1${2// /_}'  replaces all space chars with underscore
 
 SURROUND-VIM
 cs'"				changes 'x' to "x"
