@@ -27,7 +27,7 @@ EX/ED
 
 
 SURROUND-VIM
-cs'"				                                changes 'x' to "x"
+cs'"				                                changes 'foo' to "foo"
 ysiw<char>			                                adds	<char>x</char>
 csw<char/tag>		                                adds	<char>x</char>
 csW<char/tag>		                                adds	<char>x</char>
