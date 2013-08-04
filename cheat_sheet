@@ -5,8 +5,11 @@ EX/ED
 :g<regex>/d			deletes lines matching regex
 :r !<cli-cmd>		pipes cmd output to buffer
 
+*SH
+openssl rand -base64 <int>                          generates <int> random characters      
+
 GIT
-git push -u origin branch							push new branch
+git push -u origin branch  						    push new branch
 git remote show origin								shows remote branches
 git fetch origin									update local from origin
 git checkout --track -b <branch> origin/<branch>	new branch tracks remote branch
@@ -14,17 +17,29 @@ git checkout --track origin/<branch>				terse version ^^
 git push origin --delete <branch>					delete remote branch
 
 ZSH
-print *(<tab>		list globs
-setopt glob_dots	glob hidden files
-unsetopt <opt>		unsets setopts
+print *(<tab>		                                list globs
+setopt glob_dots	                                glob hidden files
+unsetopt <opt>		                                unsets setopts
+zmv '(**/)(*)' '$1${2// /_}'                        replaces all space chars with underscore
+
+
+Vim
+===
+
+EX/ED
+:h holy-grail		                                lists all ex commands
+:<line#>t.			                                copies line# to current position (.)
+:<line#>m.			                                moves line# to current position (.)
+:g<regex>/d			                                deletes lines matching regex
+
 
 SURROUND-VIM
-cs'"				changes 'x' to "x"
-ysiw<char>			adds	<char>x</char>
-csw<char/tag>		adds	<char>x</char>
-csW<char/tag>		adds	<char>x</char>
-ds<char>			removes
-yss<char>			line surround
+cs'"				                                changes 'foo' to "foo"
+ysiw<char>			                                adds	<char>x</char>
+csw<char/tag>		                                adds	<char>x</char>
+csW<char/tag>		                                adds	<char>x</char>
+ds<char>			                                removes
+yss<char>			                                line surround
 
 SUBVERT
 :S[ubvert]/pattern							search in the current buffer
@@ -52,3 +67,23 @@ zj				next fold
 zk				prev fold
 zr				reduce foldlevel
 zm				increase foldlevel
+
+:S[ubvert]/pattern							        search in the current buffer
+:S[ubvert]/pattern/ {file} ...				        search files, results in quickfix list
+:S[ubvert]/pattern/replacement/[flags]		        substitute in the current buffer
+crc				                                    coerce to camelCase
+crm				                                    coerce to MixedCase
+crs (also cr_) 	                                    coerce to snake_case
+cru				                                    coerce to SNAKE_UPPERCASE
+cr-				                                    coerce to dash-case
+
+GSTATUS (vim-fugitive)
+C-n				                                    next file
+C-p				                                    previous file
+ca				                                    commit --amend
+cA				                                    amend using last commit message
+cc/C			                                    commit
+D				                                    diff
+q				                                    close
+R				                                    reload gstatus
+S				                                    :Gvsplit
