@@ -3,6 +3,7 @@ EX/ED
 :<line#>t.			copies line# to current position (.)
 :<line#>m.			moves line# to current position (.)
 :g<regex>/d			deletes lines matching regex
+:r !<cli-cmd>		pipes cmd output to buffer
 
 GIT
 git push -u origin branch							push new branch
@@ -45,3 +46,9 @@ D				diff
 q				close
 R				reload gstatus
 S				:Gvsplit
+
+FOLDS
+zj				next fold
+zk				prev fold
+zr				reduce foldlevel
+zm				increase foldlevel
